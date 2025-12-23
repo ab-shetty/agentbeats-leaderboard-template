@@ -1,16 +1,15 @@
 [green_agent]
-agentbeats_id = ""
-env = { API_KEY = "${GITHUB_SECRET_NAME}", LOG_LEVEL = "INFO" }
+agentbeats_id = "019b4d90-632c-7a30-bf36-d0b41ae1e263"
+env = { OPENAI_API_KEY = "${OPENAI_API_KEY}" LOG_LEVEL = "INFO" }
 
 [[participants]]
 agentbeats_id = ""
-name = "role_1_name"
+name = "customer_agent"
 env = {}
 
-[[participants]]
-agentbeats_id = ""
-name = "role_2_name"
-env = {}
 
 [config]
-# Add your assessment config here
+domain = "airline"  # Options: "airline" or "retail"
+num_tasks = 10
+max_steps = 100
+user_llm = "openai/gpt-5-mini"
