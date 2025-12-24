@@ -1,0 +1,15 @@
+[green_agent]
+agentbeats_id = "019b4d90-632c-7a30-bf36-d0b41ae1e263"
+env = { OPENAI_API_KEY = "${OPENAI_API_KEY}"}
+
+[[participants]]
+agentbeats_id = "019b4da4-4310-78c1-8d3e-e6892bd110e4"
+name = "agent"
+env = {OPENAI_API_KEY = "${OPENAI_API_KEY}"}
+
+
+[config]
+domain = "airline"  # Options: "airline" or "retail"
+num_tasks = 3
+max_steps = 50
+user_llm = "openai/gpt-5-mini"
